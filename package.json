@@ -1,0 +1,17 @@
+{
+  "name": "should-i-do-it",
+  "version": "1.0.0",
+  "description": "AI-powered decision engine powered by Google Gemini",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["decision", "gemini", "ai"],
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

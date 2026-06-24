@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Should I Do It?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="card">
+      <h1 class="title">Should I Do It?</h1>
+
+      <label for="question" class="sr-only">Your question</label>
+      <input id="question" class="question-input" type="text" placeholder="Type your question here..." aria-label="Question" />
+
+      <div class="controls">
+        <button id="askBtn" class="btn">Consult AI</button>
+      </div>
+
+      <div id="loading" class="loading" aria-live="polite" hidden>
+        <span id="loadingMsg">Preparing...</span>
+      </div>
+
+      <div id="result" class="result" aria-live="polite" hidden>
+        <div class="result-card">
+          <div id="answer" class="answer"></div>
+          <div id="meta" class="meta"></div>
+          <div id="reasoning" class="reasoning"></div>
+        </div>
+      </div>
+
+      <p id="error" class="error" role="alert" aria-live="assertive" hidden></p>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

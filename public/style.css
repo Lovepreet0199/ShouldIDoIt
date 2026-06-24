@@ -1,0 +1,92 @@
+/* Main stylesheet for "Should I Do It?" - dark modern UI */
+:root{
+  --bg:#0f1720;
+  --card:#0b1320;
+  --muted:#9aa6b2;
+  --accent:#7c5cff;
+  --success:#7ee787;
+  --danger:#ff6b6b;
+  --warning:#ffb86b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg),#061018);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.app{width:100%;max-width:720px;padding:28px}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:14px;
+  padding:36px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+.title{
+  margin:0 0 18px 0;
+  font-size:44px;
+  letter-spacing:-0.02em;
+  background:linear-gradient(90deg,var(--accent),#5df);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.question-input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);
+  color:inherit;
+  font-size:16px;
+  outline:none;
+  margin-bottom:14px;
+}
+.question-input:focus{box-shadow:0 0 0 4px rgba(124,92,255,0.12);border-color:rgba(124,92,255,0.6)}
+.controls{display:flex;justify-content:center}
+.btn{
+  background:linear-gradient(90deg,var(--accent),#4fc3f7);
+  border:none;padding:12px 20px;border-radius:10px;color:#071023;font-weight:700;font-size:16px;cursor:pointer
+}
+.btn:active{transform:translateY(1px)}
+.loading{margin-top:18px;color:var(--muted);font-style:italic}
+.result{margin-top:22px}
+.result-card{
+  margin:0 auto;padding:28px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+  width:min(560px,100%);box-shadow:0 8px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03);
+  transform-origin:center;animation:pop .36s ease-out;text-align:left;
+}
+.answer{font-size:32px;font-weight:700;margin-bottom:16px;color:#fff;text-align:center}
+.meta{
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:18px;
+}
+.meta-item{
+  font-size:13px;padding:6px 12px;border-radius:20px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);
+  color:var(--muted);
+}
+.meta-item strong{color:#e6eef6;font-weight:600}
+.meta-item.risk-low strong{color:var(--success)}
+.meta-item.risk-medium strong{color:var(--warning)}
+.meta-item.risk-high strong{color:var(--danger)}
+.reasoning{
+  font-size:15px;line-height:1.6;color:var(--muted);
+  padding:16px;border-radius:10px;
+  background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);
+}
+.reasoning-label{
+  font-size:12px;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.06em;color:var(--accent);margin-bottom:8px;
+}
+.error{color:var(--danger);margin-top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
